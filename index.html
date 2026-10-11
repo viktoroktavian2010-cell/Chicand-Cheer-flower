@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chic &amp; Cheer · Flower Delivery in Odesa</title>
+    <meta
+      name="description"
+      content="Chic & Cheer delivers elegant bouquets across Odesa, Ukraine. Give someone a little happiness."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">Skip to catalog</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#top">
+          <span class="logo-mark">✿</span>
+          <span class="logo-text">Chic &amp; Cheer</span>
+        </a>
+
+        <nav class="nav" id="primary-nav" aria-label="Primary">
+          <a href="#top">Home</a>
+          <a href="#catalog">Bouquets</a>
+          <a href="#categories">Categories</a>
+          <a href="#order">Order</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="cart-button" id="cart-toggle" type="button" aria-haspopup="dialog">
+            <span class="cart-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6 7h14l-1.4 8.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.7L5.2 4H3"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                <circle cx="17.5" cy="20" r="1.2" fill="currentColor" />
+              </svg>
+            </span>
+            <span class="cart-label">Cart</span>
+            <span class="cart-count" id="cart-count">0</span>
+          </button>
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sr-only">Menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&w=1800&q=80"
+            alt="Soft pink and cream roses arranged in a lush bouquet"
+          />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Flower delivery in Odesa</p>
+          <h1>Give someone a little happiness</h1>
+          <p class="hero-copy">
+            Thoughtful bouquets, wrapped with care and delivered across the city —
+            from Primorsky to Fontan, and everywhere in between.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalog">Browse bouquets</a>
+            <a class="btn btn-ghost" href="#order">Place an order</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="notice" aria-label="Availability notice">
+        <div class="notice-inner">
+          <span class="notice-icon" aria-hidden="true">❀</span>
+          <p>
+            <strong>Please note:</strong> bouquet availability must be confirmed
+            before an order is accepted. Seasonal stems change daily, so we will
+            contact you by phone to confirm your arrangement and delivery time.
+          </p>
+        </div>
+      </section>
+
+      <section class="categories" id="categories">
+        <div class="section-heading">
+          <p class="eyebrow">Find the right mood</p>
+          <h2>Categories</h2>
+        </div>
+        <div class="category-grid">
+          <button class="category-card" data-filter="roses" type="button">
+            <img
+              src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=80"
+              alt=""
+            />
+            <span>Roses</span>
+          </button>
+          <button class="category-card" data-filter="romantic" type="button">
+            <img
+              src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80"
+              alt=""
+            />
+            <span>Romantic</span>
+          </button>
+          <button class="category-card" data-filter="birthday" type="button">
+            <img
+              src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=900&q=80"
+              alt=""
+            />
+            <span>Birthday</span>
+          </button>
+          <button class="category-card" data-filter="seasonal" type="button">
+            <img
+              src="https://images.unsplash.com/photo-1468327768560-75b60c6d73f7?auto=format&fit=crop&w=900&q=80"
+              alt=""
+            />
+            <span>Seasonal</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="catalog" id="catalog">
+        <div class="section-heading">
+          <p class="eyebrow">Hand-tied in our Odesa atelier</p>
+          <h2>Bouquet catalog</h2>
+          <p class="lede">
+            Eight signature arrangements, priced in Ukrainian hryvnias. Filter by
+            occasion, then add your favorites to the cart.
+          </p>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Bouquet filters">
+          <button class="filter-chip is-active" data-filter="all" type="button">All</button>
+          <button class="filter-chip" data-filter="roses" type="button">Roses</button>
+          <button class="filter-chip" data-filter="romantic" type="button">Romantic</button>
+          <button class="filter-chip" data-filter="birthday" type="button">Birthday</button>
+          <button class="filter-chip" data-filter="seasonal" type="button">Seasonal</button>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <section class="atelier">
+        <div class="atelier-image">
+          <img
+            src="https://images.unsplash.com/photo-1455659817273-f978642fc588?auto=format&fit=crop&w=1200&q=80"
+            alt="Cream and blush flowers arranged on a wooden table"
+          />
+        </div>
+        <div class="atelier-copy">
+          <p class="eyebrow">A little happiness, delivered</p>
+          <h2>Florist-made, city-wide</h2>
+          <p>
+            Each bouquet is composed the morning of delivery, using the freshest
+            available stems. If a variety is short that day, we will suggest a
+            graceful substitute in the same palette — always with your approval.
+          </p>
+          <ul>
+            <li>Same-day delivery across Odesa when ordered before 14:00</li>
+            <li>Handwritten card included with every arrangement</li>
+            <li>Available after phone confirmation of stems and time</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="order" id="order">
+        <div class="section-heading">
+          <p class="eyebrow">Checkout</p>
+          <h2>Complete your order</h2>
+          <p class="lede">
+            Share delivery details below. We will call to confirm availability
+            before the order is accepted.
+          </p>
+        </div>
+
+        <div class="order-layout">
+          <aside class="order-summary" id="order-summary">
+            <h3>Your selection</h3>
+            <div id="order-items"></div>
+            <p class="order-total">Total <span id="order-total">0 UAH</span></p>
+            <p class="order-hint">Availability will be confirmed by phone.</p>
+          </aside>
+
+          <form class="order-form" id="order-form">
+            <label>
+              Customer name
+              <input type="text" name="name" autocomplete="name" required placeholder="Olha Shevchenko" />
+            </label>
+            <label>
+              Phone number
+              <input
+                type="tel"
+                name="phone"
+                autocomplete="tel"
+                required
+                placeholder="+380 67 000 00 00"
+              />
+            </label>
+            <label>
+              Delivery address in Odesa
+              <input
+                type="text"
+                name="address"
+                autocomplete="street-address"
+                required
+                placeholder="Deribasivska St, 12, apt. 5"
+              />
+            </label>
+            <label>
+              Preferred delivery date
+              <input type="date" name="date" required />
+            </label>
+            <label class="full">
+              Message for the recipient
+              <span class="optional">(optional)</span>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="A few words to accompany the flowers…"
+              ></textarea>
+            </label>
+
+            <p class="form-notice">
+              Submitting this form requests your bouquet. It is not a confirmed
+              order until our florist verifies availability and calls you back.
+            </p>
+
+            <button class="btn btn-primary" type="submit">Request order</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Questions?</p>
+            <h2>We are happy to help</h2>
+            <p>
+              Tell us the occasion, palette, or budget — we will suggest the
+              loveliest option for Odesa delivery.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span>Phone</span>
+                <a href="tel:+380487000101">+380 48 700 01 01</a>
+              </li>
+              <li>
+                <span>Telegram</span>
+                <a href="https://t.me/chicandcheer" target="_blank" rel="noreferrer">@chicandcheer</a>
+              </li>
+              <li>
+                <span>Email</span>
+                <a href="mailto:hello@chicandcheer.od.ua">hello@chicandcheer.od.ua</a>
+              </li>
+              <li>
+                <span>Studio</span>
+                <address>Yevropeiska St, 8, Odesa, Ukraine</address>
+              </li>
+              <li>
+                <span>Hours</span>
+                <p>Daily, 09:00–20:00</p>
+              </li>
+            </ul>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <label>
+              Name
+              <input type="text" name="contactName" required placeholder="Your name" />
+            </label>
+            <label>
+              Phone or email
+              <input type="text" name="contactReach" required placeholder="How should we reply?" />
+            </label>
+            <label>
+              Question
+              <textarea name="contactMessage" rows="4" required placeholder="How can we help?"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Chic &amp; Cheer · Flower delivery in Odesa</p>
+      <p>Give someone a little happiness.</p>
+    </footer>
+
+    <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+      <div class="cart-panel">
+        <div class="cart-head">
+          <h2 id="cart-title">Your cart</h2>
+          <button class="icon-close" id="cart-close" type="button" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-foot">
+          <p class="cart-total">Total <strong id="cart-total">0 UAH</strong></p>
+          <p class="cart-note">Availability must be confirmed before we accept the order.</p>
+          <a class="btn btn-primary" id="checkout-link" href="#order">Continue to order</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
